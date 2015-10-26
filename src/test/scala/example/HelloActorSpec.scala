@@ -16,11 +16,11 @@ class HelloActorSpec extends TestKit(ActorSystem("helloActorSys"))
     with Matchers
     with WordSpecLike {
 
-  "Hello actor" must {
+  "Hello actor" should {
     "say hello in message" in {
       val actorRef = TestActorRef[HelloActor]
-      actorRef ! "akka"
-      expectMsg("Hello akka")
+      actorRef ! "mum"
+      expectMsg("Hello mum")
     }
   }
 
